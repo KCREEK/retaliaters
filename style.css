@@ -1,0 +1,202 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Navbar-Section*/
+.navbar{
+    background: #2f2e2e;
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    position: -webkit-sticky;
+    z-index: 999;
+}
+
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height:80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin:0 auto;
+    padding:0 50px;
+}
+
+#website_logo{
+    cursor:pointer;
+    text-decoration: none;
+    background-color: #55ee5d;
+    background-image:linear-gradient(to top, #88ef6e 0%,#11a55d);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: '';
+}
+
+.website_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_menu{
+    height:80px;
+}
+
+.basic_home{
+    color:whitesmoke;
+    display: flex;
+    align-items: center;
+    padding:0 1rem;
+    text-decoration: none;
+    height:100%;
+}
+
+.navbar_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width:100%;
+}
+
+.button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    width:100%;
+    height:100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: rgb(16, 197, 91);
+    color:whitesmoke;
+}
+
+.button:hover{
+    background: rgb(149, 206, 148);
+    transition: all 0.3 ease;
+}
+
+/* Header Section */
+.header{
+    background-color: #141414;
+}
+
+.header_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #141414;
+    z-index: 5;
+    width: 800%;
+    position: relative;
+    max-width: 1300px;
+    padding: 0px 50px;
+}
+
+.image_official {
+    float: right;
+}
+
+.content_header h1{
+    margin-top: auto;
+    font-size: 40px;
+    background-color: #11a55d;
+    background-image: linear-gradient(to top, rgb(120, 203, 120) 0%, rgb(63, 169, 63) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-transform-origin-x: 10px;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.content_header h2{
+    font-size: 30px;
+    background-color: #d78e95;
+    background-image: linear-gradient(to top, rgb(226, 150, 164) 0%, rgb(218, 100, 114) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.content_header p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #e2d4d7;
+    background-image: linear-gradient(to top, rgb(223, 210, 212) 0%, rgb(225, 179, 184) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* Footer */
+.footer{
+    background-color: #141414;
+    margin:0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.rows{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.columns{
+    width: 25%;
+    padding: 0 15px;
+    align-items: center;
+}
+
+.columns h4{
+    font-size: 25px;
+    justify-items: baseline;
+    justify-content: center;
+    background-color: #dee08a;
+    background-image: linear-gradient(to top, rgb(215, 219, 120) 0%, rgb(198, 206, 82) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    position: relative;
+}
+
+.columns .social_links a{
+    display: inline-block;
+    height: 20px;
+    justify-content: center;
+    width: 20px;
+    background-color: rgb(164, 200, 164);
+    background-image: linear-gradient(to top, rgb(127, 191, 123) 0%, rgb(97, 212, 97) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
