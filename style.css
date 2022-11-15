@@ -5,27 +5,36 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+    --navL: 80px;
+    --fs: 1.5em;
+}
+
 /*Navbar-Section*/
 .navbar{
     background: #2f2e2e;
-    height:80px;
+    height: var(--navL);
     display:flex;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-    position: -webkit-sticky;
+    width: 100vw;
     z-index: 999;
 }
 
 .navbar_container{
     display: flex;
     justify-content: space-between;
-    height:80px;
+    height:100%; width: 100%;
     z-index: 1;
-    width: 100%;
-    max-width: 1300px;
     margin:0 auto;
     padding:0 50px;
+}
+
+.dc_logo {
+    width: calc(var(--navL) -  2em);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(259deg) brightness(104%) contrast(103%);
+    display: none;
 }
 
 #website_logo{
@@ -40,8 +49,10 @@
     -moz-text-fill-color: transparent;
     display: flex;
     align-items: center;
-    font-size: 30px;
-    font-family: '';
+}
+
+#website_logo > b {
+    font-size: var(--fs);
 }
 
 .website_menu{
@@ -49,10 +60,6 @@
     align-items: center;
     list-style: none;
     text-align: center;
-}
-
-.navbar_menu{
-    height:80px;
 }
 
 .basic_home{
@@ -95,25 +102,34 @@
 /* Header Section */
 .header{
     background-color: #141414;
+    max-width: 100vw;
+    height: calc(100vh - var(--navL));
 }
 
 .header_main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-self: center;
-    align-items: center;
+    display: flex;
     margin: 0 auto;
-    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 100vw;
     background-color: #141414;
     z-index: 5;
-    width: 800%;
     position: relative;
-    max-width: 1300px;
     padding: 0px 50px;
 }
 
 .image_official {
-    float: right;
+    max-width: 50vw;
+    height: auto;
+}
+
+.image_official > img{
+    width: calc(100% + 1em);
+}
+
+.content_header {
+    max-width: 40vw;
 }
 
 .content_header h1{
@@ -199,4 +215,111 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+}
+
+
+/* =========================================================================================================== */
+/* =========================================================================================================== */
+
+@media (max-width: 768px){
+    :root {
+        --navL: 70px;
+        --fs: 1.25em;
+    }
+
+    .header_main{
+        flex-direction: column;
+        text-align: center;
+        gap: var(--navL);
+    }
+
+    .content_header {
+        max-width: 100%;
+    }
+
+    .navbar_menu, .navbar_button {
+        font-size: calc(var(--fs) - 0.5em);
+    }
+
+    .basic_home, .navbar_button {
+        padding: 0 0.5rem;
+    }
+
+    .button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px){
+    :root {
+        --navL: 60px;
+    }
+
+    .navbar_button > a > p {
+        display: none;
+    }
+    .navbar_button > a > img {
+        display: inline-block;
+    }
+
+    .button {
+        padding: 7px;
+    }
+}
+
+@media (max-width: 480px){
+    .navbar_container{
+        padding:0 25px;
+    }
+}
+
+@media (max-width: 350px){
+    :root {
+        --navL: 150px;
+    }
+
+    .navbar_container{
+        gap: 0.5em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .website_menu {
+        gap: 1em;
+    }
+
+    .button {
+        padding: 5px;
+    }
+
+    #website_logo > b {
+        font-size: calc(var(--fs) * 1.5);
+    }
+    
+    .navbar_button > a > img {
+        width: calc(var(--navL) - 100px);
+    }
+
+    .content_header h1 {
+        margin-top: 1em;
+        font-size: calc(var(--fs) * 1);
+    }
+
+    .content_header h2 {
+        font-size: calc(var(--fs) * 1.25);
+    }
+
+    .content_header p {
+        font-size: calc(var(--fs) * 0.75);
+    }
+
+    .header_main {
+        gap: calc(var(--fs) * 2.25);
+        align-items: center;
+    }
+
+    .image_official > img {
+        width: 50vw;
+    }
 }
