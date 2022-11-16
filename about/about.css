@@ -1,0 +1,5 @@
+.about_container {
+    width: 100%;
+    height: calc(100vh - var(--navL));
+    background-color: #141414;
+}
