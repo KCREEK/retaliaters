@@ -8,9 +8,8 @@
 .about_container {
     position: relative;
     width: 100%;
-    height: 100vh;
     background-color: #141414;
-    height: calc(100vh - var(--navL));
+    min-height: calc(100vh - var(--navL));
     color: white;
     display: flex;
     flex-direction: column;
@@ -22,7 +21,6 @@
     font-size: 1rem;
     display: flex;
     flex-direction: column;
-    border: 1px solid hotpink;
     align-items: center;
     justify-items: center;
     background-image: linear-gradient(to top, rgb(223, 210, 212) 0%, rgb(225, 179, 184) 100%);
@@ -36,16 +34,96 @@
     flex-wrap: wrap;
 }
 
-.about_container > .our_team {
+.about_container > .our_team_container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    margin: 1.4rem 0;
+}
+
+.our_team_container > p {
+    margin-bottom: 1.4rem;
+}
+
+.profile_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #55ee5d;
+    background-color: #141414;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(85,237,93,1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(85,237,93,1);
+    box-shadow: 10px 10px 0px 0px rgba(85,237,93,1);
+    width: 60vw;
     gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+
+.profile_card__img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    height: 100px;
+}
+
+.profile_card__img_container > img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile_card__info_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: calc(100% - 100px);
+    gap: .3rem;
+}
+
+.heading_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.heading_container a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.heading_container span {
+    color: rgb(218, 218, 218);
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    line-height: 120%;
+}
+
+.profile_card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.profile_card:nth-child(even) > .profile_card__info_container {
+    align-items: flex-end;
+}
+
+.profile_card:nth-child(even) > .profile_card__info_container .description {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .about_footer { 
-   height: 20vh;
-   width: 100%;
+    height: 20vh;
+    width: 100%;
 }
