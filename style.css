@@ -318,7 +318,6 @@
         gap: calc(var(--fs) * 2.25);
         align-items: center;
     }
-
     .image_official > img {
         width: 50vw;
     }
